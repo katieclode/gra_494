@@ -1,11 +1,4 @@
-
-// // call the init function when the page is done loading
-// $(init);
-
-// function init() {
-//     // calls function to find season when button is clicked
-//     $("#thumbnail").click(); 
-// }
+// JavaScript
 
 const thumbnail = document.getElementById('thumbnail');
 const lightbox = document.getElementById('lightbox');

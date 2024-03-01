@@ -9,7 +9,8 @@ body {
 	font-size: 16px;
 	background-color: #f0f1f3;
 	color: #d8dee9;
-	font-family: degular, sans-serif;
+	font-family: poppins, sans-serif;
+    /* overflow-x: hidden; */
 }
 
 header {
@@ -21,13 +22,15 @@ footer {
     display: flex;
 }
 
-h1,h2,h3,p,ol,ul,li,a {
-	font-family: degular, sans-serif;
+p,ol,ul,li,a {
+	font-family: poppins, sans-serif;
     color: #121212;
 }
 
 h1,h2,h3 {
-	font-family: degular, sans-serif;
+	font-family: "all-round-gothic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 	color: #121212;
 }
 
@@ -64,6 +67,8 @@ code, pre {
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
+
+
 .image {
 	height: auto;
 }
@@ -80,11 +85,18 @@ code, pre {
     width: 50%;
 }
 
+.logo {
+    max-width: 3.5em;
+}
+
+.logo--footer {
+    margin-top: .5em;
+}
+
 main {
-    max-width: 80em;
+    max-width: 100em;
     margin: 0 auto;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 	transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
 }
 
@@ -105,21 +117,20 @@ p.copyright {
 section {
     padding: 2em 0;
     border-top: 1px solid #121212;
+    translate: 0px -150px;
 }
 
-
-/* Breakpoint */
-@media screen and (max-width: 700px) {
-	section.main {
-		margin: 5rem 2rem;
-	}
+section.translate {
+    translate: 0px 0px;
 }
-
-/* Style Guide */
 
 ul.nav {
     list-style-type: none;
     margin: 2.5em 0 0 auto;
+}
+
+ul.nav--footer {
+    margin-top: 0.5em;
 }
 
 ul.nav li {
@@ -143,33 +154,6 @@ button:hover {
 
 .button--no-outline {
     border: none;
-}
-
-input {
-	margin: 0 1em 0 0;
-	padding: 0 0 7px;
-	appearance: none;
-	background-color: transparent;
-	border: none;
-	border-radius: 0;
-	font-size: 10px;
-	outline: none;
-	user-select: auto;
-	width: 242px;
-	position: relative;
-	z-index: 0;
-	border-bottom: 1px solid #121212;
-	color: #121212;
-}
-
-::placeholder {
-    font-family: degular, sans-serif;
-	color: #121212;
-	opacity: 1; /* Firefox */
-}
-  
-::-ms-input-placeholder { /* Edge 12 -18 */
-	color: #121212;
 }
 
 .heading {
@@ -220,10 +204,6 @@ input {
     line-height: 1.2;
     font-size: 12px;
     border: none;
-}
-
-section.translate {
-    height: 70em;
 }
 
 div.menu {
@@ -295,7 +275,7 @@ div.list {
 div.list div {
     border: 1px solid #121212;
     padding: 1em .5em;
-    flex: 0 0 10em;
+    flex: 1 0 15em;
 }
 
 div.list h3 {
@@ -323,10 +303,6 @@ div.center-box div h2 {
     border: none;
 }
 
-/* div.center-box button {
-    
-} */
-
 #lightbox {
     position: fixed;
     top: 50%;
@@ -335,7 +311,6 @@ div.center-box div h2 {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 20px;
     z-index: 999;
-    display: none;
 }
 
 #close-btn {
@@ -353,4 +328,34 @@ div.center-box div h2 {
 
 #thumbnail {
     cursor: pointer;
+}
+
+.title {
+    font-size: 7rem;
+    line-height: normal;
+}
+
+
+/* Breakpoint */
+@media screen and (max-width: 700px) {
+
+    div.center-box,section {
+        translate: 0px 0px;
+    }
+
+    .title {
+        font-size: 4rem;
+    }
+    
+    div.flex {
+        display: block;
+    }
+
+    .image--section,.image--thumbnail {
+        width: 100%;
+    }
+
+    div.flex img {
+        padding: 1em 0;
+    }
 }
